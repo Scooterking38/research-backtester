@@ -1,34 +1,57 @@
-Here is a clean, professional, and well-structured README.md for the GitHub repository 'research-backtester':
+# research-backtester
 
-**Research Backtester**
-Automate your investment research with ease
+A Python-based backtesting framework designed for quantitative finance research. This repository provides a modular architecture to simulate trading strategies, evaluate performance metrics, and visualize results.
 
-**Features**
+## Architecture Overview
 
-* Reads historical stock data from Yahoo Finance
-* Performs technical analysis using Pandas and NumPy
-* Visualizes results with Matplotlib
-* Integrates SciPy for statistical modeling
-* Allows testing and validation through Pytest
-* Enforces coding style consistency with Black and Ruff
+The `research-backtester` is structured into several key modules:
 
-**Tech Stack**
+- **src/backtest.py**: Contains the main logic for running backtests.
+- **src/config.py**: Manages configuration settings such as directory paths and constants.
+- **src/data.py**: Handles data retrieval and preprocessing, specifically downloading historical price data from Yahoo Finance.
+- **src/metrics.py**: Computes various performance metrics like total return, volatility, Sharpe ratio, and maximum drawdown.
+- **src/plotting.py**: Provides functions to visualize backtest results.
+- **src/run_day1_backtest.py**: A script to execute a specific backtesting scenario.
+- **src/signals.py**: Defines trading signals used in the backtests.
 
-* Python 3.x
-* pandas
-* numpy
-* matplotlib
-* yfinance
-* scipy
-* pytest
-* black
-* ruff
+The `tests` directory contains unit tests for the core components, ensuring robustness and reliability of the framework.
 
-**Getting Started**
+## Tech Stack
 
-1. Install required packages by running `pip install -r requirements.txt`
-2. Clone the repository and navigate to the project root
-3. Run `python src/main.py` to execute the research backtester
-4. Explore test files in `tests/` directory for examples of usage
+- **Programming Language**: Python
+- **Data Handling**: Pandas, NumPy
+- **Financial Data Retrieval**: yfinance
+- **Visualization**: Matplotlib
+- **Testing**: Pytest
+- **Code Formatting & Linting**: Black, Ruff
 
-This README provides a clear overview of the repository's purpose, technical capabilities, and installation instructions.
+## Getting Started / Setup Guide
+
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/yourusername/research-backtester.git
+   cd research-backtester
+   ```
+
+2. **Install Dependencies**:
+   Ensure you have Python and pip installed. Then, install the required packages using:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **Run a Backtest**:
+   Execute the Day 1 backtest script:
+   ```bash
+   python src/run_day1_backtest.py
+   ```
+
+4. **Explore and Modify**:
+   Feel free to modify the code in `src/` to implement your own trading strategies or adjust parameters.
+
+5. **Testing**:
+   Run unit tests to verify the functionality of individual components:
+   ```bash
+   pytest
+   ```
+
+This setup provides a comprehensive environment for conducting quantitative finance research and backtesting trading strategies.
